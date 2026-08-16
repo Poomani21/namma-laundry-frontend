@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 import { MessageCircle, Phone, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { site } from "@/data/site";
@@ -22,7 +22,7 @@ export function CTAButton({
   className,
   withArrow,
 }: {
-  to: string;
+  to: LinkProps["to"];
   children: React.ReactNode;
   variant?: "primary" | "gold" | "outline" | "ghost";
   size?: Size;
